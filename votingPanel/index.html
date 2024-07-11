@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Votação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Painel de Votação</h1>
+        <div class="candidate-card" onclick="selectCandidate(this)">
+            <div class="candidate-info">
+                <div class="status"></div>
+                <h2>Candidato - Galego</h2>
+                <p><strong>Nome:</strong> JOACI MARCOS ALCANTARA DIAS</p>
+                <p><strong>Idade:</strong> 39</p>
+                <p><strong>Partido:</strong> PSD</p>
+                <p><strong>Educação:</strong> Escola</p>
+            </div>
+            <div class="candidate-photo">
+                <img src="/img/galego.jpg" alt="Candidato 1">
+            </div>
+        </div>
+        <div class="candidate-card" onclick="selectCandidate(this)">
+            <div class="candidate-info">
+                <div class="status"></div>
+                <h2>Candidato - Dadê</h2>
+                <p><strong>Nome:</strong> EVILAZIO JOAQUIM DE OLIVEIRA</p>
+                <p><strong>Idade:</strong> 41</p>
+                <p><strong>Partido:</strong> Avante</p>
+                <p><strong>Educação:</strong> Escola</p>
+            </div>
+            <div class="candidate-photo">
+                <img src="/img/dade.jpg" alt="Candidato 2">
+            </div>
+        </div>
+        <div class="consent">
+            <input type="checkbox" id="consent-checkbox">
+            <label for="consent-checkbox">Eu entendo que escolhi a opção de voto anônimo e concordo com isso</label>
+        </div>
+        <button class="submit-button">ENVIAR</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="candidate candidate-a">Galego<br>Number xx</div>
+            <div class="candidate candidate-b">Dadê<br>Number xx</div>
+        </div>
+        <div class="main">
+            <div class="people-score">
+                <h3>Pontuação dos candidatos</h3>
+                <div class="score">72,0</div>
+            </div>
+            <div class="timing">
+                <h3>Tempo</h3>
+                <canvas id="timingChart"></canvas>
+            </div>
+        </div>
+        <div class="candidates">
+            <h3>Candidatos</h3>
+            <canvas id="candidatesChart"></canvas>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="contact">
+                <p><strong>Email:</strong></p>
+                <p>reclamacao@eleicao.gov.br</p>
+                <p>info@eleicao.gov.br</p>
+            </div>
+            <div class="feedback">
+                <p><strong>Feedback Rápido:</strong></p>
+                <form>
+                    <label for="feedback-name">Nome (Opcional):</label>
+                    <input type="text" id="feedback-name" name="feedback-name">
+                    <label for="feedback-text">Seu Feedback:</label>
+                    <textarea id="feedback-text" name="feedback-text"></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
